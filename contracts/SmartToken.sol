@@ -26,8 +26,9 @@ contract SmartToken is ISmartToken, Owned, ERC20Token, TokenHolder {
         @param _decimals   for display purposes only
     */
     function SmartToken(string _name, string _symbol, uint8 _decimals, uint256 _totalSupply)
-        ERC20Token(_name, _symbol, _decimals, _totalSupply)
+        ERC20Token(_name, _symbol, _decimals)
     {
+        totalSupply = _totalSupply * (10 ** uint256(decimals));
         NewSmartToken(address(this));
     }
 
