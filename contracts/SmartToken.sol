@@ -16,7 +16,7 @@ contract SmartToken is ISmartToken, Owned, ERC20Token, TokenHolder {
 
     // triggered when a smart token is deployed - the _token address is defined for forward compatibility, in case we want to trigger the event from a factory
     event NewSmartToken(address _token);
-    
+
 
     /**
         @dev constructor
@@ -28,7 +28,8 @@ contract SmartToken is ISmartToken, Owned, ERC20Token, TokenHolder {
     function SmartToken(string _name, string _symbol, uint8 _decimals, uint256 _totalSupply)
         ERC20Token(_name, _symbol, _decimals)
     {
-        totalSupply = _totalSupply * (10 ** uint256(decimals));
+        totalSupply = _totalSupply * (10 ** uint256(_decimals));
+        balanceOf[msg.sender] = totalSupply;
         NewSmartToken(address(this));
     }
 
@@ -48,7 +49,7 @@ contract SmartToken is ISmartToken, Owned, ERC20Token, TokenHolder {
         transfersEnabled = !_disable;
     }
 
- 
+
 
     // ERC20 standard method overrides with some extra functionality
 

@@ -1,5 +1,5 @@
 {
-  "contract_name": "ISmartToken",
+  "contractName": "ISmartToken",
   "abi": [
     {
       "constant": true,
@@ -12,6 +12,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -34,6 +35,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -47,6 +49,7 @@
       "name": "disableTransfers",
       "outputs": [],
       "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -60,6 +63,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -86,6 +90,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -99,6 +104,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -117,6 +123,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -125,6 +132,7 @@
       "name": "acceptOwnership",
       "outputs": [],
       "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -138,6 +146,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -151,6 +160,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -173,6 +183,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -195,6 +206,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -208,11 +220,214 @@
       "name": "transferOwnership",
       "outputs": [],
       "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "unlinked_binary": "0x",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.11;\nimport './IOwned.sol';\nimport './IERC20Token.sol';\n\n/*\n    Smart Token interface\n*/\ncontract ISmartToken is IOwned, IERC20Token {\n    function disableTransfers(bool _disable) public;\n\n}",
+  "sourcePath": "/Users/subramanianvenkatesan/Desktop/GN-Compass-Token/contracts/interfaces/ISmartToken.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/subramanianvenkatesan/Desktop/GN-Compass-Token/contracts/interfaces/ISmartToken.sol",
+      "exportedSymbols": {
+        "ISmartToken": [
+          732
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 720,
+        "name": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 719,
+          "absolutePath": "/Users/subramanianvenkatesan/Desktop/GN-Compass-Token/contracts/interfaces/IOwned.sol",
+          "file": "./IOwned.sol",
+          "scope": 733,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 721,
+        "name": "ImportDirective",
+        "src": "25:22:7"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 702,
+          "absolutePath": "/Users/subramanianvenkatesan/Desktop/GN-Compass-Token/contracts/interfaces/IERC20Token.sol",
+          "file": "./IERC20Token.sol",
+          "scope": 733,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 722,
+        "name": "ImportDirective",
+        "src": "48:27:7"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            701,
+            718
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            732,
+            701,
+            718
+          ],
+          "name": "ISmartToken",
+          "scope": 733
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IOwned",
+                  "referencedDeclaration": 718,
+                  "type": "contract IOwned"
+                },
+                "id": 723,
+                "name": "UserDefinedTypeName",
+                "src": "133:6:7"
+              }
+            ],
+            "id": 724,
+            "name": "InheritanceSpecifier",
+            "src": "133:6:7"
+          },
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IERC20Token",
+                  "referencedDeclaration": 701,
+                  "type": "contract IERC20Token"
+                },
+                "id": 725,
+                "name": "UserDefinedTypeName",
+                "src": "141:11:7"
+              }
+            ],
+            "id": 726,
+            "name": "InheritanceSpecifier",
+            "src": "141:11:7"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "disableTransfers",
+              "payable": false,
+              "scope": 732,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_disable",
+                      "scope": 731,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 727,
+                        "name": "ElementaryTypeName",
+                        "src": "185:4:7"
+                      }
+                    ],
+                    "id": 728,
+                    "name": "VariableDeclaration",
+                    "src": "185:13:7"
+                  }
+                ],
+                "id": 729,
+                "name": "ParameterList",
+                "src": "184:15:7"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 730,
+                "name": "ParameterList",
+                "src": "206:0:7"
+              }
+            ],
+            "id": 731,
+            "name": "FunctionDefinition",
+            "src": "159:48:7"
+          }
+        ],
+        "id": 732,
+        "name": "ContractDefinition",
+        "src": "109:101:7"
+      }
+    ],
+    "id": 733,
+    "name": "SourceUnit",
+    "src": "0:210:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
   "networks": {},
-  "schema_version": "0.0.5",
-  "updated_at": 1510806086829
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-18T00:46:05.272Z"
 }

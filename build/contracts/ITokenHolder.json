@@ -1,5 +1,5 @@
 {
-  "contract_name": "ITokenHolder",
+  "contractName": "ITokenHolder",
   "abi": [
     {
       "constant": false,
@@ -20,6 +20,7 @@
       "name": "withdrawTokens",
       "outputs": [],
       "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -28,6 +29,7 @@
       "name": "acceptOwnership",
       "outputs": [],
       "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     },
     {
@@ -41,6 +43,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -54,11 +57,243 @@
       "name": "transferOwnership",
       "outputs": [],
       "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
     }
   ],
-  "unlinked_binary": "0x",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.11;\nimport './IOwned.sol';\nimport './IERC20Token.sol';\n\n/*\n    Token Holder interface\n*/\ncontract ITokenHolder is IOwned {\n    function withdrawTokens(IERC20Token _token, address _to, uint256 _amount) public;\n}",
+  "sourcePath": "/Users/subramanianvenkatesan/Desktop/GN-Compass-Token/contracts/interfaces/ITokenHolder.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/subramanianvenkatesan/Desktop/GN-Compass-Token/contracts/interfaces/ITokenHolder.sol",
+      "exportedSymbols": {
+        "ITokenHolder": [
+          748
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".11"
+          ]
+        },
+        "id": 734,
+        "name": "PragmaDirective",
+        "src": "0:24:8"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 719,
+          "absolutePath": "/Users/subramanianvenkatesan/Desktop/GN-Compass-Token/contracts/interfaces/IOwned.sol",
+          "file": "./IOwned.sol",
+          "scope": 749,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 735,
+        "name": "ImportDirective",
+        "src": "25:22:8"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 702,
+          "absolutePath": "/Users/subramanianvenkatesan/Desktop/GN-Compass-Token/contracts/interfaces/IERC20Token.sol",
+          "file": "./IERC20Token.sol",
+          "scope": 749,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 736,
+        "name": "ImportDirective",
+        "src": "48:27:8"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            718
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            748,
+            718
+          ],
+          "name": "ITokenHolder",
+          "scope": 749
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "IOwned",
+                  "referencedDeclaration": 718,
+                  "type": "contract IOwned"
+                },
+                "id": 737,
+                "name": "UserDefinedTypeName",
+                "src": "135:6:8"
+              }
+            ],
+            "id": 738,
+            "name": "InheritanceSpecifier",
+            "src": "135:6:8"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "constant": false,
+              "implemented": false,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "withdrawTokens",
+              "payable": false,
+              "scope": 748,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_token",
+                      "scope": 747,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "contract IERC20Token",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "contractScope": null,
+                          "name": "IERC20Token",
+                          "referencedDeclaration": 701,
+                          "type": "contract IERC20Token"
+                        },
+                        "id": 739,
+                        "name": "UserDefinedTypeName",
+                        "src": "172:11:8"
+                      }
+                    ],
+                    "id": 740,
+                    "name": "VariableDeclaration",
+                    "src": "172:18:8"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_to",
+                      "scope": 747,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 741,
+                        "name": "ElementaryTypeName",
+                        "src": "192:7:8"
+                      }
+                    ],
+                    "id": 742,
+                    "name": "VariableDeclaration",
+                    "src": "192:11:8"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_amount",
+                      "scope": 747,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 743,
+                        "name": "ElementaryTypeName",
+                        "src": "205:7:8"
+                      }
+                    ],
+                    "id": 744,
+                    "name": "VariableDeclaration",
+                    "src": "205:15:8"
+                  }
+                ],
+                "id": 745,
+                "name": "ParameterList",
+                "src": "171:50:8"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 746,
+                "name": "ParameterList",
+                "src": "228:0:8"
+              }
+            ],
+            "id": 747,
+            "name": "FunctionDefinition",
+            "src": "148:81:8"
+          }
+        ],
+        "id": 748,
+        "name": "ContractDefinition",
+        "src": "110:121:8"
+      }
+    ],
+    "id": 749,
+    "name": "SourceUnit",
+    "src": "0:231:8"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
   "networks": {},
-  "schema_version": "0.0.5",
-  "updated_at": 1510806086830
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2017-11-18T00:46:05.274Z"
 }
